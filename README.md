@@ -45,5 +45,3 @@ See [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) for the full technical roadmap.
 MIT
 
 ---
-
-# Tribute

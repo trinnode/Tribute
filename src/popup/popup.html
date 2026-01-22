@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribute - Programmable Patronage</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="header-content">
+        <h1>Tribute</h1>
+        <p class="tagline">Programmable Patronage</p>
+      </div>
+      <button id="settings-btn" class="icon-button" title="Settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 1v6m0 6v6m-3-9H3m6 0h6m6 0h6"></path>
+        </svg>
+      </button>
+    </header>
+
+    <div id="wallet-section" class="section">
+      <div id="wallet-disconnected" class="wallet-status">
+        <div class="status-icon">🔒</div>
+        <p>Connect your Stacks wallet to start</p>
+        <button id="connect-wallet-btn" class="primary-button">Connect Wallet</button>
+      </div>
+      
+      <div id="wallet-connected" class="wallet-status" style="display: none;">
+        <div class="wallet-info">
+          <div class="status-icon">✅</div>
+          <div>
+            <p class="wallet-label">Connected</p>
+            <p id="wallet-address" class="wallet-address">SP2J6...9EJ7</p>
+          </div>
+        </div>
+        <button id="disconnect-wallet-btn" class="secondary-button small">Disconnect</button>
+      </div>
+    </div>
+
+    <div id="stats-section" class="section" style="display: none;">
+      <h2 class="section-title">Your Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="total-sent">0</div>
+          <div class="stat-label">Sent (sats)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="total-received">0</div>
+          <div class="stat-label">Received (sats)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="reputation-score">0</div>
+          <div class="stat-label">Reputation</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="recent-section" class="section" style="display: none;">
+      <h2 class="section-title">Recent Transactions</h2>
+      <div id="transactions-list" class="transactions-list">
+        <div class="empty-state">
+          <p>No transactions yet</p>
+          <p class="empty-state-hint">Start tipping to see your history here</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="features-section" class="section">
+      <h2 class="section-title">Features</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">💰</div>
+          <div class="feature-content">
+            <h3>Smart Contract Tips</h3>
+            <p>Send Bitcoin tips with programmable smart contracts</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-content">
+            <h3>Revenue Splitting</h3>
+            <p>Automatically split payments among multiple recipients</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📈</div>
+          <div class="feature-content">
+            <h3>Yield Generation</h3>
+            <p>Earn passive income on your tips through staking</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-content">
+            <h3>On-Chain Reputation</h3>
+            <p>Build your reputation as a patron or creator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <p class="footer-text">Powered by sBTC on Stacks</p>
+      <div class="footer-links">
+        <a href="#" id="help-link">Help</a>
+        <span>•</span>
+        <a href="#" id="about-link">About</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

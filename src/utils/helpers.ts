@@ -71,7 +71,7 @@ export function formatRelativeTime(timestamp: number): string {
  * Generate a unique transaction ID
  */
 export function generateTxId(): string {
-  return `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `tx_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
 }
 
 /**

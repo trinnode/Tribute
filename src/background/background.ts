@@ -151,7 +151,7 @@ class TributeBackgroundService {
       if (chrome.notifications) {
         chrome.notifications.create({
           type: 'basic',
-          iconUrl: '../icons/icon48.png',
+          iconUrl: 'icons/icon48.png',
           title: 'Tribute Sent!',
           message: `Successfully sent ${data.amount} sats to ${data.recipient}`
         });
@@ -251,7 +251,7 @@ class TributeBackgroundService {
   }
 
   private generateTransactionId(): string {
-    return `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `tx_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
   }
 
   private async saveTransactions(): Promise<void> {

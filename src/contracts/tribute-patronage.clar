@@ -51,6 +51,14 @@
 
 ;; Private functions
 
+(define-private (sum-percentages (percentages (list 10 uint)))
+  (fold add-percentage percentages u0)
+)
+
+(define-private (add-percentage (percentage uint) (sum uint))
+  (+ sum percentage)
+)
+
 (define-private (update-reputation (user principal) (amount uint) (is-sender bool))
   (let
     (
@@ -135,7 +143,7 @@
     (asserts! (is-eq (len split-recipients) (len split-percentages)) ERR-INVALID-SPLIT)
     
     ;; Validate percentages sum to 100
-    (asserts! (is-eq (fold + split-percentages u0) u100) ERR-INVALID-SPLIT)
+    (asserts! (is-eq (sum-percentages split-percentages) u100) ERR-INVALID-SPLIT)
     
     (let
       (

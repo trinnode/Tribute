@@ -35,7 +35,13 @@ module.exports = {
         { from: 'src/popup/popup.html', to: 'popup/popup.html' },
         { from: 'src/popup/popup.css', to: 'popup/popup.css' },
         { from: 'src/content/content.css', to: 'content/content.css' },
-        { from: 'src/icons', to: 'icons' }
+        { 
+          from: 'src/icons', 
+          to: 'icons',
+          globOptions: {
+            ignore: ['**/*.sh', '**/*.py']
+          }
+        }
       ]
     })
   ],

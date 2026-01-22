@@ -39,7 +39,6 @@ See [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) for the full technical roadmap.
 ## Documentation
 
 - [Yellow Paper](./TributeYellowPaper.md) - Product vision and specifications
-- [Development Plan](./DEVELOPMENT_PLAN.md) - Technical implementation guide
 
 ## License
 

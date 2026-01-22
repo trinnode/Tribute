@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+*.tsbuildinfo
+
+# Clarinet
+.cache/
+.devnet/
+history.txt
+
+# Environment
+.env
+.env.local
+.env.*.local
+DEVELOPMENT_PLAN.md
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Turbo
+.turbo/
+
+# Extension builds
+*.crx
+*.xpi
+*.zip
+chrome-mv3-prod/
+firefox-mv2-prod/
+
+# Misc
+*.local
+.plasmo/

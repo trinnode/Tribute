@@ -1,0 +1,46 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: sip-009-trait
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 5920
+            path: contracts/traits/sip-009-trait.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: badge-nft
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 90250
+            path: contracts/badge-nft.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: registry
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 70640
+            path: contracts/registry.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: sip-010-trait
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 8890
+            path: contracts/traits/sip-010-trait.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: splitter
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 112670
+            path: contracts/splitter.clar
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"

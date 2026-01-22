@@ -1,0 +1,30 @@
+---
+id: 0
+name: Tribute Protocol Full Deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    # Batch 1: Deploy SIP-009 trait first
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: sip-009-trait
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 500000
+            path: contracts/traits/sip-009-trait.clar
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.5"
+    # Batch 2: Deploy badge-nft (depends on sip-009-trait)
+    - id: 1
+      transactions:
+        - contract-publish:
+            contract-name: badge-nft
+            expected-sender: STX9BA8A6BQBWTZJ62DWZ6G1QQAAHZKKC7R46JE8
+            cost: 500000
+            path: contracts/badge-nft.clar
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.5"

@@ -1,0 +1,25 @@
+{
+  "name": "@tribute/contracts",
+  "version": "0.1.0",
+  "description": "Tribute Protocol - Clarity Smart Contracts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run -- --coverage --costs",
+    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"pnpm run test:coverage\"",
+    "check": "clarinet check",
+    "console": "clarinet console",
+    "devnet": "clarinet devnet start"
+  },
+  "author": "Tribute Protocol",
+  "license": "MIT",
+  "dependencies": {
+    "@stacks/clarinet-sdk": "^3.9.0",
+    "@stacks/transactions": "^7.2.0",
+    "@types/node": "^24.4.0",
+    "chokidar-cli": "^3.0.0",
+    "vitest": "^4.0.7",
+    "vitest-environment-clarinet": "^3.0.0"
+  }
+}
